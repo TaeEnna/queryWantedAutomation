@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="1">
+
+  <testsuite name="validInput"
+    errors="0" failures="0" hostname="" id="" package="validInput" skipped="0"
+    tests="1" time="3.096" timestamp="">
+  
+    <testcase name="Valid Drivers License" classname="validInput" time="3.096" assertions="5">
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>
