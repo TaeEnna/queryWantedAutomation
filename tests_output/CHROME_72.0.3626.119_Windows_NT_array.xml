@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="1">
+
+  <testsuite name="array"
+    errors="1" failures="0" hostname="" id="" package="array" skipped="0"
+    tests="1" time="1.486" timestamp="">
+  
+    <testcase name="Input valid values" classname="array" time="1.486" assertions="0">
+    </testcase>
+  
+
+  
+    <system-err>
+      [0;31m  A session is required to run this command (locateMultipleElements).[0m
+[0;90m   [0m
+    </system-err>
+  
+
+  
+  </testsuite>
+</testsuites>

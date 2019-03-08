@@ -1,15 +1,62 @@
 var inputCommands = {
-    inputDriversLicense: function (input, result) {
+    inputDriversLicense: function () {
         this
-        .waitForElementPresent('@tab', 5000)
-        .clickText('Open Menu')
-        .waitForElementVisible('@enterPage')
-        .clickText('Enter Wanted')
+            .waitForElementPresent('@tab', 5000)
+            .clickText('Open Menu')
+            .waitForElementVisible('@enterPage')
+            .clickText('Enter Wanted')
             .setValue('@dLicense', input)
             .click('@submit')
-            //I get an error that this is not clickable. It is...it just won't submit it since the fields aren't filled out correct. It's HAS to be clicked to get error message...
+        //I get an error that this is not clickable. It is...it just won't submit it since the fields aren't filled out correct. It's HAS to be clicked to get error message...
         this.expect.element('@error').to.be.present
-    }
+    },
+  inputFields: function(fields) {
+        if (fields.header) {
+            this
+                .setValue('@header', fields.header)
+        }
+        if (fields.mke) {
+            this
+                .setValue('@mke', fields.mke)
+        }
+        if (fields.ori) {
+            this
+                .setValue('@ori', fields.ori)
+        }
+        if (fields.name) {
+            this
+                .setValue('@name', fields.name)
+        }
+        if (fields.sex) {
+            this
+                .setValue('@sex', fields.sex)
+        }
+        if (fields.race) {
+            this
+                .setValue('@race', fields.race)
+        }
+        if (fields.height) {
+            this
+                .setValue('@height', fields.height)
+        }
+        if (fields.weight) {
+            this
+                .setValue('@weight', fields.weight)
+        }
+        if (fields.hair) {
+            this
+                .setValue('@hair', fields.hair)
+        }
+        if (fields.offense) {
+            this
+                .setValue('@offense', fields.offense)
+        }
+        if (fields.dateWarrant) {
+            this
+                .setValue('@dateWarrant', fields.dateWarrant)
+        }
+        return this
+    } 
 }
 var enterWantedCommands = {
     //Click by text
