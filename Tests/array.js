@@ -20,27 +20,10 @@ module.exports = {
                 .clickText('Male')
                 .clickText('White')
                 .click('@submit')
-                .expect.element('@query').text.to.contain(test.savedInfo)
+                .expect.element('@query').text.to.contain('AndyRoach.DD.Officer08.Gabby Doofus.M.W.508.125.Red.Forgery.2019-02-09')
             manager.expect.element('@validMessage').to.be.present
             manager.expect.element('@submit').to.not.be.enabled
 
         })
-        'Input valid two': browser => {
-            create.forEach(test => {
-                console.log(test) //this will show and log stuff for you
-                manager
-                    .waitForElementPresent('@tab', 5000)
-                    .clickText('Open Menu')
-                    .waitForElementVisible('@enterPage')
-                    .clickText('Enter Wanted')
-                    .inputFields(test.validTwo)
-                    .clickText('Male')
-                    .clickText('White')
-                    .click('@submit')
-                    .expect.element('@query').text.to.contain(test.savedInfo)
-                manager.expect.element('@validMessage').to.be.present
-                manager.expect.element('@submit').to.not.be.enabled
-    
-            })
     }
 }
